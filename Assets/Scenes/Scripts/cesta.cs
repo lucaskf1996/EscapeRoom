@@ -5,24 +5,25 @@ using UnityEngine;
 public class cesta : MonoBehaviour
 {
 
-    GameObject bau;
+    private GameObject bau;
+    private GameObject lockObj;
     private int contador;
     // Start is called before the first frame update
     void Start()
     {
         bau = GameObject.FindGameObjectWithTag("bau");
-        Debug.Log(bau);
+        lockObj = GameObject.FindGameObjectWithTag("lock");
         contador = 0;
     }
 
 
     private void OnTriggerEnter(Collider other){
-        Debug.Log(other.name);
         if (other.tag == "bola") {
             Debug.Log("Entrei no cesta on trigger");
             contador++;
             if (contador == 1){
                 bau.GetComponent<ChestController>().OpenChest();
+                Destroy(lockObj);
             }
         }
     }

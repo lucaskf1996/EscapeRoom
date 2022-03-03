@@ -9,6 +9,7 @@ TagManager:
   - bau
   - BolaSpawner
   - chave
+  - lock
   layers:
   - Default
   - TransparentFX
