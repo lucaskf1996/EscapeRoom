@@ -15,11 +15,16 @@ public class ChestController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other){
+    // private void OnTriggerEnter(Collider other){
         
-        if (anim != null && other.gameObject.transform.parent.name == "fingers") {
-            anim.SetTrigger("TrOpen");
-        }
+    //     if (anim != null && other.gameObject.transform.parent.name == "fingers") {
+    //         anim.SetTrigger("TrOpen");
+    //     }
+    // }
+
+    public void OpenChest() {
+        Debug.Log("Open chest");
+        anim.SetTrigger("TrOpen");
     }
 
 
