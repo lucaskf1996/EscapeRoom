@@ -6,20 +6,18 @@ public class ChestController : MonoBehaviour
 {
 
     private Animator anim;
-    private BoxCollider collider;
+    // private BoxCollider collider;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("AAAAAAAAAAAAAAAAA");
-        collider = GetComponent<BoxCollider>();
+        // collider = GetComponent<BoxCollider>();
         anim = GetComponent<Animator>();
         
     }
 
     private void OnTriggerEnter(Collider other){
-        Debug.Log("Colidiu!");
-
-        if (anim != null) {
+        
+        if (anim != null && other.gameObject.transform.parent.name == "fingers") {
             anim.SetTrigger("TrOpen");
         }
     }
