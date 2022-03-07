@@ -23,6 +23,7 @@ public class cesta : MonoBehaviour
             contador++;
             if (contador == 1){
                 bau.GetComponent<ChestController>().OpenChest();
+                bau.GetComponent<AudioSource>().Play();
                 Destroy(lockObj);
             }
         }

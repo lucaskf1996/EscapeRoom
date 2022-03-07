@@ -17,6 +17,7 @@ public class DoorController : MonoBehaviour
         if (other.tag == "chave"){
             GetComponent<CircularDrive>().enabled = true;
             Destroy(GameObject.FindGameObjectWithTag(other.tag));
+            GetComponent<AudioSource>().Play();
         }
     }
 

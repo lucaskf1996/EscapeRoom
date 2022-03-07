@@ -10,6 +10,14 @@ public class FlagController : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other){
+        if(other.tag == "bola"){
+            GameObject.FindGameObjectWithTag("button").GetComponent<Collider>().enabled = true;
+            GameObject.FindGameObjectWithTag("button").GetComponent<AudioSource>().Play();
+            Destroy(GameObject.FindGameObjectWithTag("cap"));
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

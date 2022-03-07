@@ -10,6 +10,8 @@ TagManager:
   - BolaSpawner
   - chave
   - lock
+  - button
+  - cap
   layers:
   - Default
   - TransparentFX

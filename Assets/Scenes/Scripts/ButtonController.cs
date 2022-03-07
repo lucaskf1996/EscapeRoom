@@ -9,11 +9,10 @@ public class ButtonController : MonoBehaviour
     void Start()
     {
         BolaSpawner = GameObject.FindGameObjectWithTag("BolaSpawner");
-        
+        GetComponent<Collider>().enabled = false;
     }
 
     private void OnTriggerEnter(Collider other){
-        Debug.Log("Hitou botao");
         BolaSpawner.GetComponent<BolaSpawner>().Spawn();
     }
 
